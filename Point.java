@@ -33,11 +33,21 @@ public class Point {
         this.y = y;
     }
 
+    public void setXY(Point p) {
+        this.x = p.getX();
+        this.y = p.getY();
+    }
+
     public boolean isContained(Point p) {
         if ((Math.pow(p.getX() - this.getX(),2) + Math.pow(p.getY() - this.getY(),2)<20)) {
             return true;
         }
         return false;
+    }
+
+    public void copyPoint(Point p){
+        this.x = p.x;
+        this.y = p.y;
     }
 
     @Override
